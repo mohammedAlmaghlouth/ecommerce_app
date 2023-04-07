@@ -8,6 +8,13 @@ import 'package:go_router/go_router.dart';
 
 import '../features/products_list/products_list_screen.dart';
 
+enum AppRoute {
+  cart,
+  orders,
+  account,
+  signIn,
+}
+
 final goRouter = GoRouter(
   initialLocation: '/',
   debugLogDiagnostics: true,
@@ -18,6 +25,7 @@ final goRouter = GoRouter(
       routes: [
         GoRoute(
           path: 'cart',
+          name: AppRoute.cart.name,
           pageBuilder: (context, state) => MaterialPage(
             key: state.pageKey,
             fullscreenDialog: true,
@@ -26,6 +34,7 @@ final goRouter = GoRouter(
         ),
         GoRoute(
           path: 'orders',
+          name: AppRoute.orders.name,
           pageBuilder: (context, state) => MaterialPage(
             key: state.pageKey,
             fullscreenDialog: true,
@@ -34,6 +43,7 @@ final goRouter = GoRouter(
         ),
         GoRoute(
           path: 'account',
+          name: AppRoute.account.name,
           pageBuilder: (context, state) => MaterialPage(
             key: state.pageKey,
             fullscreenDialog: true,
@@ -42,6 +52,7 @@ final goRouter = GoRouter(
         ),
         GoRoute(
           path: 'signIn',
+          name: AppRoute.signIn.name,
           pageBuilder: (context, state) => MaterialPage(
             key: state.pageKey,
             fullscreenDialog: true,
