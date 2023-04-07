@@ -9,6 +9,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final goRouter = GoRouter(
+      initialLocation: '/',
+      debugLogDiagnostics: true,
       routes: [
         GoRoute(
           path: '/',
