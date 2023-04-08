@@ -74,7 +74,7 @@ final goRouter = GoRouter(
                 fullscreenDialog: true,
                 child: const CheckoutScreen(),
               ),
-        ),
+            ),
           ],
         ),
         GoRoute(
