@@ -22,8 +22,9 @@ class ProductScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: Read from data source
-    final product =
-        kTestProducts.firstWhere((product) => product.id == productId);
+    final product = kTestProducts.firstWhere(
+      (product) => product.id == productId,
+    );
     return Scaffold(
       appBar: const HomeAppBar(),
       body: product == null
