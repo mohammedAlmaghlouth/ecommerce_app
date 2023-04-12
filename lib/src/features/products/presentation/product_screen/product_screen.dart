@@ -23,7 +23,7 @@ class ProductScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: Read from data source
-    final product = FakeProductsRepositary.instance.getProduct(productId);
+    final product = FakeProductsRepository.instance.getProduct(productId);
     return Scaffold(
       appBar: const HomeAppBar(),
       body: product == null
