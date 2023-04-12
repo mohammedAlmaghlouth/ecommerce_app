@@ -1,5 +1,6 @@
 import 'package:ecommerce_app/src/constants/test_products.dart';
 import 'package:ecommerce_app/src/features/cart/presentation/add_to_cart/add_to_cart_widget.dart';
+import 'package:ecommerce_app/src/features/products/data/fake_products_repositary.dart';
 import 'package:ecommerce_app/src/features/products/presentation/home_app_bar/home_app_bar.dart';
 import 'package:ecommerce_app/src/features/products/presentation/product_screen/leave_review_action.dart';
 import 'package:ecommerce_app/src/features/products/presentation/product_screen/product_average_rating.dart';
@@ -22,8 +23,7 @@ class ProductScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: Read from data source
-    final product =
-        kTestProducts.firstWhere((product) => product.id == productId);
+    final product = FakeProductsRepositary.instance.getProduct(productId);
     return Scaffold(
       appBar: const HomeAppBar(),
       body: product == null
@@ -67,7 +67,8 @@ class ProductDetails extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Text(product.title, style: Theme.of(context).textTheme.headline6),
+              Text(product.title,
+                  style: Theme.of(context).textTheme.titleLarge),
               gapH8,
               Text(product.description),
               // Only show average if there is at least one rating
@@ -79,7 +80,7 @@ class ProductDetails extends StatelessWidget {
               const Divider(),
               gapH8,
               Text(priceFormatted,
-                  style: Theme.of(context).textTheme.headline5),
+                  style: Theme.of(context).textTheme.headlineSmall),
               gapH8,
               LeaveReviewAction(productId: product.id),
               const Divider(),
