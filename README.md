@@ -13,9 +13,6 @@ https://codewithandrea.com/courses/complete-flutter-bundle/
 This link will guide you through the installation of Flutter on your local computer in detail.
 https://docs.flutter.dev/get-started/install
 
-## Features & Screenshots
-
-
 ## Resources
 A few resources to get you started if this is your first Flutter project:
 
