@@ -1,8 +1,7 @@
 import 'dart:math';
 
 import 'package:ecommerce_app/src/common_widgets/alert_dialogs.dart';
-import 'package:ecommerce_app/src/constants/test_products.dart';
-import 'package:ecommerce_app/src/features/products/data/fake_products_repositary.dart';
+import 'package:ecommerce_app/src/features/products/data/fake_products_repository.dart';
 import 'package:ecommerce_app/src/localization/string_hardcoded.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_app/src/common_widgets/custom_image.dart';
@@ -81,10 +80,9 @@ class ShoppingCartItemContents extends StatelessWidget {
       endContent: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Text(product.title, style: Theme.of(context).textTheme.headlineSmall),
+          Text(product.title, style: Theme.of(context).textTheme.headline5),
           gapH24,
-          Text(priceFormatted,
-              style: Theme.of(context).textTheme.headlineSmall),
+          Text(priceFormatted, style: Theme.of(context).textTheme.headline5),
           gapH24,
           isEditable
               // show the quantity selector and a delete button
